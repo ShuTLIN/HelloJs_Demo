@@ -12,13 +12,13 @@ import {
   View
 } from 'react-native';
 import Home from './Page/home';
-import Menu from './Page/menu'
-
+import Menu from './Page/menu';
+import About from './Page/about';
 
 export default class Deadlineclub extends Component {
   render() {
     return (
-      <Menu/>
+      <About/>
     );
   }
 }
