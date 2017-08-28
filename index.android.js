@@ -14,11 +14,13 @@ import {
 import Home from './Page/home';
 import Menu from './Page/menu';
 import About from './Page/about';
+import List from './Page/List';
+import ListItem from './Page/listItem';
 
 export default class Deadlineclub extends Component {
   render() {
     return (
-      <About/>
+      <ListItem/>
     );
   }
 }
