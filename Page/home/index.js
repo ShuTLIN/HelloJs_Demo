@@ -1,25 +1,31 @@
 import React, {Component}  from  'react';
+import {Router,Stack,Scene,Actions} from 'react-native-router-flux';
 import {
   StyleSheet,
   View,
   Image,
   Text,
+  Button,
+  TouchableOpacity,
+  TouchableHighlight,
 } from 'react-native';
 
 
 export default class Home extends Component {
+    
     render(){
+        
         return(
             
             //backgroundImage and Text
-            <Image style={{flex:1}}  source={{uri:'http://fakeimg.pl/768x1280/'}}>  
             
-                <View  style={styles.containerText}>
-                    <Text style={{fontSize:30,color:'#fff'}}>Splash</Text>
+            <TouchableHighlight style={styles.containerText}  onPress={ () =>{ Actions.menu() } } >
+                <View>
+                    <Image style={{width:400,height:600}}  source={{uri:'http://fakeimg.pl/768x1280/'}}/>
                 </View>
-                <View  style={styles.containerText}></View> 
+            </TouchableHighlight>
+                
             
-            </Image>
         );  
     }
 }

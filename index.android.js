@@ -17,10 +17,22 @@ import About from './Page/about';
 import List from './Page/List';
 import ListItem from './Page/listItem';
 
+import {Router,Stack,Scene} from 'react-native-router-flux';
+
 export default class Deadlineclub extends Component {
   render() {
     return (
-      <ListItem/>
+      
+      <Router>
+        <Stack key="root">
+          <Scene key="home" component={Home} hideNavBar={true}/>
+          <Scene key="menu" component={Menu} hideNavBar={true}/>
+          <Scene key="list" component={List} title="賞桐景點與步道推薦"/>
+          <Scene key="listitem" component={ListItem} title="賞桐景點及步道收藏"/>
+          <Scene key="about" component={About} title="關於"/>
+        </Stack>
+      </Router>
+    
     );
   }
 }
