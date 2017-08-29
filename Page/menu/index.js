@@ -31,7 +31,7 @@ export default class Menu extends Component{
     
                 <View style={{borderWidth:1,borderColor:'#fff'}}></View>
     
-                <TouchableHighlight style={styles.containerText}  onPress={ () =>{ Actions.listitem() } } >
+                <TouchableHighlight style={styles.containerText}   >
                      <View>
                          <Image style={{width:400,height:160}}  source={{uri:'http://fakeimg.pl/350x200/?text=column_2'}}>
                              <Text style={styles.textSecondary}>賞桐景點及步道</Text>

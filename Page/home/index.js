@@ -14,10 +14,19 @@ export default class Home extends Component {
         return(
             
             //backgroundImage and Text
-            <TouchableHighlight style={styles.containerText}  onPress={ () =>{ Actions.menu() } } >
-                 <View>
-                     <Image style={{width:400,height:600}}  source={{uri:'http://fakeimg.pl/768x1280/'}}/>
-                  </View>
+            <TouchableHighlight style={styles.button}  onPress={ () =>{ Actions.menu() } } >
+                 
+                     <Image style={{flex:1}}  source={{uri:'http://fakeimg.pl/768x1280/'}}>
+                     
+                     <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+                        <Text style={{fontSize:40,color:'white'}}>Splash</Text>
+                     </View>
+                     
+                     <View style={{flex:1}}/>
+                     
+                     
+                     </Image>
+                  
             </TouchableHighlight>
         );  
     }
@@ -29,6 +38,9 @@ const styles=StyleSheet.create({
         flexDirection:'column',
         justifyContent:'center',
         alignItems:'center',
+  },
+  button:{
+      flex:1,
   },
     
 });
