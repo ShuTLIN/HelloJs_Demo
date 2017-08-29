@@ -16,11 +16,12 @@ import Menu from './Page/menu';
 import About from './Page/about';
 import List from './Page/List';
 import ListItem from './Page/listItem';
+import Location from './Page/map';
 
 export default class Deadlineclub extends Component {
   render() {
     return (
-      <ListItem/>
+      <List message={"ddd"}/>
     );
   }
 }

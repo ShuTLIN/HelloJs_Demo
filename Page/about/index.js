@@ -7,6 +7,8 @@ Text,
 TouchableOpacity,
 }from 'react-native';
 
+
+
 export default class About extends Component{
   render(){
    return( 
@@ -34,7 +36,7 @@ export default class About extends Component{
             <Text style={styles.containerText}>政府資料開放-各機關以符合國際「開放定義」將政府資料以開放格式於網路公開，提供個人、學校、團體、企業或政府機關等使用者，依其需求連結下載即利用。</Text>
             <Text style={{color:'gray',padding:20,fontSize:13,}}>版本號 1.0001</Text>  
             <Text style={{color:'gray',padding:20,fontSize:13,}}>開發者 XXX</Text>    
-
+           
         </View>
     
     </View>

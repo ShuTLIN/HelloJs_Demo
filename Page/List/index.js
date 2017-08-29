@@ -7,6 +7,7 @@ import {
     Image,
 }from 'react-native';
 
+
 export default class List extends Component{
     render(){
         return(
@@ -59,8 +60,10 @@ export default class List extends Component{
                 </View>
                 
             </ScrollView>
-            
+           
         );
+        
+        
         
     }
 };

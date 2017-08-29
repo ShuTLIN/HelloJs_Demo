@@ -3236,6 +3236,10 @@ react-devtools-core@2.3.1:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-maps@^0.16.2:
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.16.2.tgz#5716cefd0fb4c3f326bc2281f02e873ebaa1f987"
+
 react-native@0.47.2:
   version "0.47.2"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.47.2.tgz#5e55cd84e4947123c86d36ea6f95ab9ed2d0cb19"
