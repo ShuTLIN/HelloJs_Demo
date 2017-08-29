@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Router,Stack,Scene,Actions} from 'react-native-router-flux';
 import{
     View,
     StyleSheet,
@@ -6,6 +7,7 @@ import{
     Image,
     TouchableOpacity,
     ScrollView,
+    TouchableHighlight,
 } from 'react-native';
 
 export default class Menu extends Component{
@@ -13,36 +15,40 @@ export default class Menu extends Component{
         return(
             
             <ScrollView contentContainerStyle={styles.contentContainer}>
-                <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+                <View style={{height:55,alignItems:'center',justifyContent:'center'}}>
                     <Text style={styles.headerText}>客家桐花季</Text>
                 </View>
                 
-                
-                <Image style={{flex:3,}}  source={{uri:'http://fakeimg.pl/350x200/?text=column_1'}}>
-                    <View style={styles.listPosition}>
-                        <Text style={styles.textSecondary}>賞桐景點即步道</Text>
-                        <Text style={styles.textPrimary}>推薦</Text>
-                    </View>            
-                </Image>
-    
-                <View style={{borderWidth:1,borderColor:'#fff'}}></View>
-    
-                <Image style={{flex:3,}}  source={{uri:'http://fakeimg.pl/350x200/?text=column_2'}}>
-                    <View style={styles.listPosition}>
-                        <Text style={styles.textSecondary}>賞桐景點即步道</Text>
-                        <Text style={styles.textPrimary}>收藏</Text>
+                <TouchableHighlight style={styles.containerText}  onPress={ () =>{ Actions.list() } } >
+                    <View>
+                        <Image style={{width:400,height:160}}  source={{uri:'http://fakeimg.pl/350x200/?text=column_1'}}>
+                            <Text style={styles.textSecondary}>賞桐景點及步道</Text>
+                            <Text style={styles.textPrimary}>推薦</Text>
+                        </Image> 
                     </View>
-                </Image>
+                </TouchableHighlight>
     
                 <View style={{borderWidth:1,borderColor:'#fff'}}></View>
                 
-                <Image style={{flex:3,}}  source={{uri:'http://fakeimg.pl/350x200/?text=column_3'}}>
-                    <View style={styles.listPosition}>
-                        <Text style={styles.textSecondary}>關於</Text>
-                        <Text style={styles.textPrimary}>服務</Text>
+                <TouchableHighlight style={styles.containerText}  onPress={ () =>{ Actions.listitem() } } >
+                    <View>
+                        <Image style={{width:400,height:160}}  source={{uri:'http://fakeimg.pl/350x200/?text=column_2'}}>
+                            <Text style={styles.textSecondary}>賞桐景點及步道</Text>
+                            <Text style={styles.textPrimary}>收藏</Text>
+                        </Image> 
                     </View>
-                </Image>
+                </TouchableHighlight>
     
+                <View style={{borderWidth:1,borderColor:'#fff'}}></View>
+                
+                <TouchableHighlight style={styles.containerText}  onPress={ () =>{ Actions.about() } } >
+                    <View>
+                        <Image style={{width:400,height:160}}  source={{uri:'http://fakeimg.pl/350x200/?text=column_3'}}>
+                            <Text style={styles.textSecondary}>關於</Text>
+                            <Text style={styles.textPrimary}>服務</Text>
+                        </Image>
+                    </View>
+                </TouchableHighlight>
              
              </ScrollView>
             

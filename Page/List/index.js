@@ -12,9 +12,7 @@ export default class List extends Component{
         return(
             <ScrollView contentContainerStyle={styles.contentContainer}>
                 
-                <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
-                        <Text style={styles.headerText}>賞桐景點及步道推薦</Text>
-                 </View>   
+                
                     
                 <View style={{flex:9}}>
                     
