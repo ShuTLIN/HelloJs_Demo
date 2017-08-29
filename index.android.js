@@ -5,6 +5,7 @@
  */
 
 import React, { Component } from 'react';
+import {Router,Stack,Scene} from 'react-native-router-flux';
 import {
   AppRegistry,
   StyleSheet,
@@ -21,7 +22,15 @@ import Location from './Page/map';
 export default class Deadlineclub extends Component {
   render() {
     return (
-      <List message={"ddd"}/>
+      <Router>
+         <Stack key="root">
+           <Scene key="home" component={Home} hideNavBar={true}/>
+           <Scene key="menu" component={Menu} hideNavBar={true}/>
+           <Scene key="list" component={List} title="賞桐景點與步道推薦"/>
+           <Scene key="listitem" component={ListItem} title="賞桐景點及步道收藏"/>
+           <Scene key="about" component={About} title="關於"/>
+         </Stack>
+       </Router>
     );
   }
 }

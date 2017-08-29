@@ -46,9 +46,7 @@ export default class listItem extends Component {
         
     <View style={{flex:1}}>
        
-       <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
-            <Text style={styles.headerText}>基隆景點及步道推薦</Text>
-       </View>
+       
        
         <View style={{flex:9}}>
         
