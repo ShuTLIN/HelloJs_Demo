@@ -19,9 +19,12 @@ export default class About extends Component{
             <View style={{flex:1,backgroundColor:'white'}}>
             </View>
     
-            <View style={{flex:3,backgroundColor:'#f4e3e3',flexDirection:'row'}}>
-                <Text style={{flex:5,padding:20,fontSize:30,color:'#ff60ac'}}>關於服務</Text>
-                <Image  style={{flex:6,}} source={{uri:'http://fakeimg.pl/350x200/?text=picture'}} /> 
+            <View style={{flex:3}}>
+                
+                <Image style={{width:400,height:160}}  source={require('../../assets/detailbg.png')}>
+                    <Text style={{fontSize:35,padding:10}}>關於服務</Text>
+                </Image>
+                
             </View>
         
          

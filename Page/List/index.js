@@ -24,7 +24,7 @@ export default class List extends Component{
                         <TouchableHighlight  style={styles.button}  onPress={ () =>{ Actions.listItem() } } >
                         
                         
-                        <Image style={{flex:1}} source={{uri:'http://fakeimg.pl/350x200/?text=pic'}}>
+                        <Image style={{width:200,height:200}}  source={require('../../assets/keelung.jpg')}>
                             <Text style={styles.placeText}>基隆</Text>
                         </Image>
                         
@@ -35,7 +35,7 @@ export default class List extends Component{
                         
                         <TouchableHighlight  style={styles.button}  onPress={ () =>{ Actions.listItem2() } } >
                         
-                        <Image style={{flex:1}} source={{uri:'http://fakeimg.pl/350x200/?text=pic'}}>
+                        <Image style={{width:200,height:200}}  source={require('../../assets/taoyuan.jpg')}>
                             <Text style={styles.placeText}>桃園</Text>
                         </Image>
                     
@@ -51,7 +51,7 @@ export default class List extends Component{
                     
                     <TouchableHighlight  style={styles.button}  onPress={ () =>{ Actions.listItem3() } } >
                     
-                        <Image style={{flex:1}} source={{uri:'http://fakeimg.pl/350x200/?text=pic'}}>
+                        <Image style={{width:200,height:200}}  source={require('../../assets/hsinchu.jpg')}>
                             <Text style={styles.placeText}>新竹</Text>
                         </Image>
                         
@@ -61,7 +61,7 @@ export default class List extends Component{
                         
                     <TouchableHighlight  style={styles.button}  onPress={ () =>{ Actions.listItem4() } } >        
                         
-                        <Image style={{flex:1}} source={{uri:'http://fakeimg.pl/350x200/?text=pic'}}>
+                       <Image style={{width:200,height:200}}  source={require('../../assets/miaoli.jpg')}>
                             <Text style={styles.placeText}>苗栗</Text>
                         </Image>
                         
@@ -77,7 +77,7 @@ export default class List extends Component{
                     
                     <TouchableHighlight  style={styles.button}  onPress={ () =>{ Actions.listItem5() } } >
                     
-                        <Image style={{flex:1}} source={{uri:'http://fakeimg.pl/350x200/?text=pic'}}>
+                        <Image style={{width:200,height:200}}  source={require('../../assets/nantou.jpg')}>
                             <Text style={styles.placeText}>南投</Text>
                         </Image>
                         
@@ -87,7 +87,7 @@ export default class List extends Component{
                         
                     <TouchableHighlight  style={styles.button}  onPress={ () =>{ Actions.listItem6() } } >
                         
-                        <Image style={{flex:1,}} source={{uri:'http://fakeimg.pl/350x200/?text=pic'}}>
+                        <Image style={{width:200,height:200}}  source={require('../../assets/taichung.jpg')}>
                             <Text style={styles.placeText}>台中</Text>
                         </Image>
                         

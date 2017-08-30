@@ -25,6 +25,7 @@ import ListItem6 from './Page/listItem6';
 import Location from './Page/map';
 import Detail from './Page/detail';
 import Map from './Page/map';
+import Collection from './Page/collection'
 
 export default class Deadlineclub extends Component {
   render() {
@@ -43,6 +44,7 @@ export default class Deadlineclub extends Component {
            <Scene key="detail" component={Detail} title="詳細資料"/>
            <Scene key="about" component={About} title="關於服務"/>
            <Scene key="map" component={Map} title="路線資訊"/>
+           <Scene key="collection" component={Collection} title="收藏"/>
          </Stack>
        </Router>
     );

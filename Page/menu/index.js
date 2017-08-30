@@ -22,20 +22,18 @@ export default class Menu extends Component{
                 
                 <TouchableHighlight style={styles.containerText}  onPress={ () =>{ Actions.list() } } >
                      <View>
-                         <Image style={{width:400,height:160}}  source={{uri:'http://fakeimg.pl/350x200/?text=column_1'}}>
-                             <Text style={styles.textSecondary}>賞桐景點及步道</Text>
-                             <Text style={styles.textPrimary}>推薦</Text>
+                         <Image style={{width:400,height:160}}  source={require('../../assets/home_1.png')}>
+                             
                          </Image> 
                      </View>
                  </TouchableHighlight>
     
                 <View style={{borderWidth:1,borderColor:'#fff'}}></View>
     
-                <TouchableHighlight style={styles.containerText}   >
+                <TouchableHighlight style={styles.containerText}  onPress={ () =>{ Actions.collection() } } >
                      <View>
-                         <Image style={{width:400,height:160}}  source={{uri:'http://fakeimg.pl/350x200/?text=column_2'}}>
-                             <Text style={styles.textSecondary}>賞桐景點及步道</Text>
-                             <Text style={styles.textPrimary}>收藏</Text>
+                         <Image style={{width:400,height:160}}  source={require('../../assets/home_2.png')}>
+                            
                          </Image>
                     </View>
                 </TouchableHighlight>
@@ -44,9 +42,8 @@ export default class Menu extends Component{
                 
                 <TouchableHighlight style={styles.containerText}  onPress={ () =>{ Actions.about() } } >
                      <View>
-                        <Image style={{width:400,height:160}}  source={{uri:'http://fakeimg.pl/350x200/?text=column_3'}}>
-                           <Text style={styles.textSecondary}>關於</Text>
-                             <Text style={styles.textPrimary}>服務</Text>
+                        <Image style={{width:400,height:160}}  source={require('../../assets/home_3.png')}>
+                           
                          </Image>
                     </View>
                 </TouchableHighlight>

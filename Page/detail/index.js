@@ -56,15 +56,7 @@ export default class Detail extends Component{
    return( 
     <View style={{flex:1,backgroundColor:'white'}}>
     
-        <View style={{flex:3,}}>
-
-            <View style={{flex:3,backgroundColor:'#f4e3e3'}}>
-          
-                
-          
-            </View>
-    
-        </View>
+        <Image style={{width:400,height:160}}  source={require('../../assets/detailbg.png')}/>
         
         <View style={{flex:7,margin:10}}>
         

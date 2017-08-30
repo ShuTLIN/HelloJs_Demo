@@ -41,7 +41,7 @@ constructor(props) {
             
             <TouchableHighlight style={styles.button}  onPress={()=>{this._onPressItem(item)}} >
             
-            <Image style={{flex:1}} source={{uri:'http://fakeimg.pl/350x200/?text=Pic'}}>
+            <Image style={{width:400,height:160}}  source={require('../../assets/menubg.png')}>
                     
                 <View style={{padding:5}}>
                 

@@ -14,20 +14,14 @@ export default class Home extends Component {
         return(
             
             //backgroundImage and Text
+            <View style={{flex:1}}>
             <TouchableHighlight style={styles.button}  onPress={ () =>{ Actions.menu() } } >
                  
-                     <Image style={{flex:1}}  source={{uri:'http://fakeimg.pl/768x1280/'}}>
+                     <Image style={{width:400,height:600}}  source={require('../../assets/splash.png')}/>
                      
-                     <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
-                        <Text style={{fontSize:40,color:'white'}}>Splash</Text>
-                     </View>
-                     
-                     <View style={{flex:1}}/>
-                     
-                     
-                     </Image>
                   
             </TouchableHighlight>
+            </View>
         );  
     }
 }
