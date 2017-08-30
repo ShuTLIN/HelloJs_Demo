@@ -15,47 +15,17 @@ import {
 
 
 export default class listItem4 extends Component {
-  render() {
-      
-      const buttonProps = {
-      // onPress: this.onPress,
-      onPress: () => {},
-      style: styles.button,
-      // activeOpacity: 0
-      hitSlop: {
-        top: 0,
-        left: 10,
-        bottom: 0,
-        right: 10,
-      }
-    };
-    
-      const button2Props = {
-      // onPress: this.onPress,
-      onPress: () => {},
-      style: styles.button2,
-      // activeOpacity: 0
-      hitSlop: {
-        top: 0,
-        left: 10,
-        bottom: 0,
-        right: 10,
-      }
-    };
-      
-      
-    return (
-        
-    <View style={{flex:1}}>
-       
-       
-       
-        <View style={{flex:9}}>
-        
-        
-        
-        <FlatList
-        data={[
+ _onPressItem = (item) => { 
+     this.props.navigation.navigate('detail',{
+         item:[item.key,item.address,item.transportation_1,item.transportation_2,item.latitude,item.longitude]   //your user details
+     })
+  };
+
+constructor(props) {
+    super(props);
+
+    this.state = {
+      data: [
             {key:"小西湖步道","address":"苗栗縣三義鄉","tel":"037-876009","transportation_1":"三義火車站下車，轉搭計程車","transportation_2":"國道1號三義交流道下，左轉前行50公尺即可抵達。","memo":"24HR","charge":"","latitude":24.38386,"longitude":120.7626},
             {key:"西湖渡假村","address":"苗栗縣三義鄉西湖村西湖11號","tel":"037-876699","transportation_1":"搭乘新竹客運至三義站下車步行約20分","transportation_2":"國道1號三義交流道下，左轉約50公尺即可抵達","memo":"平日：上午8：30至下午17：00止。 假日：上午8：00至下午17：30止。","charge":"全票:399元","latitude":24.38992,"longitude":120.7611},
             {key:"飛雪桐花步道","address":"苗栗縣三義鄉位於勝興車站北側","tel":"","transportation_1":"無客運可達，僅有木雕節才有巴士","transportation_2":"國道1號三義交流道下，右轉接臺13線經水美街往三義方向，看到左手邊7-11，右轉過橋可看見往勝興車站指標，依指標即可抵達。","memo":"","charge":"","latitude":24.39111,"longitude":120.7817},
@@ -95,41 +65,78 @@ export default class listItem4 extends Component {
             {key:"怡明茶園","address":"苗栗縣頭份鎮流東里老崎12鄰22-5號","tel":"037-601313","transportation_1":"","transportation_2":"循中山高於頭份交流道往三灣系統交流道下後左轉，循中正一路直行至中正三路後，左手邊頭份農會珊珠湖辦事處旁巷子左轉進入，依指標前行約3分鐘即可抵達。","memo":"AM10:00~18:00 每週一休息","charge":"","latitude":24.68618,"longitude":120.9521},
             {key:"鹿廚坑賞桐步道","address":"苗栗縣頭份鎮廣興里","tel":"","transportation_1":"頭份火車站搭乘苗栗客運往苗栗市班車至中尖山站下車約3公里。","transportation_2":"國道1號頭份交流道下，接臺1線往竹南過尖山大橋，左轉臺13線往南行約1公里，左轉尖東產業道路約2公里即可抵達。","memo":"","charge":"","latitude":24.65253,"longitude":120.8905},
             {key:"夢幻桐花步道","address":"苗栗縣頭屋鄉夢幻桐花道","tel":"","transportation_1":"苗栗火車站-苗栗客運5801、5802路線班車至鳴鳳入口站下車，距離桐花道約5.5公里。","transportation_2":"國道3號後龍交流道下右轉臺六線至行人天橋右轉，直行轉國道72東西向快速公路，接後龍汶水快速道路（72號東西向快速公路），下頭屋交流道轉臺13線往明德水庫方向(尖豐公路)。至24公里處接苗22線(看見濟世宮的黃色牌子)右轉，轉入鳴鳳山道路。夢幻桐花步道入口在5.5公里處。","memo":"","charge":"","latitude":24.56264,"longitude":120.9066}
-        ]}
-        
-        renderItem={({item}) => 
-            <View style={styles.container}>
+            ],
+
+    } 
+  }
+  
+  _renderItem = ({item}) => (
+     <View style={styles.container}>
             
-            <TouchableHighlight  style={styles.button}  onPress={ () =>{ Actions.detail() } } >
+            <TouchableHighlight style={styles.button}  onPress={()=>{this._onPressItem(item)}} >
             
             <Image style={{flex:1}} source={{uri:'http://fakeimg.pl/350x200/?text=Pic'}}>
                     
                 <View style={{padding:5}}>
+                
                     <Text style={{fontSize:18,color:'black'}}>{item.key}</Text>
                     <Text style={{fontSize:14}}>{item.address}</Text>
+                   
                 </View>
-            
-                <View style={styles.buttonguide}>
-                     <TouchableOpacity {...button2Props}>
-                        <Text style={styles.buttonText}>收藏</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity {...buttonProps}>
-                        <Text style={styles.buttonText}>導航</Text>
-                    </TouchableOpacity>
-                </View>
+
             </Image>
             
-          </TouchableHighlight>
+            </TouchableHighlight>
             
-            </View>}
+     </View>
+  );
+
+  render() {
+  
+      const buttonProps = {
+      // onPress: this.onPress,
+      onPress: () => {},
+      style: styles.button,
+      // activeOpacity: 0
+      hitSlop: {
+        top: 0,
+        left: 10,
+        bottom: 0,
+        right: 10,
+      }
+    };
+    
+      const button2Props = {
+      // onPress: this.onPress,
+      onPress: () => {},
+      style: styles.button2,
+      // activeOpacity: 0
+      hitSlop: {
+        top: 0,
+        left: 10,
+        bottom: 0,
+        right: 10,
+      }
+    };
+
+    return (
+
+    <View style={{flex:1}}>
+
+        <View style={{flex:9}}>
+
+            <FlatList
+              data={this.state.data}
         
-        ItemSeparatorComponent={
-          ({highlighted}) => <View style={{ height: 2, backgroundColor: 'white'  }} />
-        }
-        />
+              renderItem={this._renderItem}
+        
+              ItemSeparatorComponent={({highlighted}) => <View style={{ height: 2, backgroundColor: 'white'  }} />}
+            />
+        
         </View>
       
     </View>
+    
     );
   }
 }
@@ -165,3 +172,4 @@ const styles = StyleSheet.create({
       flex:1,
   },
 })
+

@@ -24,6 +24,7 @@ import ListItem5 from './Page/listItem5';
 import ListItem6 from './Page/listItem6';
 import Location from './Page/map';
 import Detail from './Page/detail';
+import Map from './Page/map';
 
 export default class Deadlineclub extends Component {
   render() {
@@ -39,8 +40,9 @@ export default class Deadlineclub extends Component {
            <Scene key="listItem4" component={ListItem4} title="苗栗景點及步道收藏"/>
            <Scene key="listItem5" component={ListItem5} title="南投景點及步道收藏"/>
            <Scene key="listItem6" component={ListItem6} title="台中景點及步道收藏"/>
-           <Scene key="detail" component={Detail} title="123"/>
+           <Scene key="detail" component={Detail} title="詳細資料"/>
            <Scene key="about" component={About} title="關於服務"/>
+           <Scene key="map" component={Map} title="路線資訊"/>
          </Stack>
        </Router>
     );

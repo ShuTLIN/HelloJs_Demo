@@ -14,8 +14,8 @@ export default class Location extends Component {
     <View style={styles.container}>
          <MapView style={styles.maps}
             initialRegion={{
-            latitude: 24.10903,
-            longitude: 120.7808,
+            latitude: this.props.navigation.state.params.item[0],
+            longitude: this.props.navigation.state.params.item[1],
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
             }}
@@ -23,10 +23,10 @@ export default class Location extends Component {
         
          <MapView.Marker 
               coordinate={{
-                latitude: 24.10903,
-                longitude: 120.7808,
+                latitude: this.props.navigation.state.params.item[0],
+                longitude: this.props.navigation.state.params.item[1],
                 latitudeDelta: 0.0922,
-                 longitudeDelta: 0.0421,
+                longitudeDelta: 0.0421,
               }}
             >
             </MapView.Marker>
