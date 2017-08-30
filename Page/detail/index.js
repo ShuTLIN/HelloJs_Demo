@@ -68,6 +68,8 @@ export default class Detail extends Component{
                         <Text style={styles.buttonText}>導航</Text>
                     </TouchableOpacity>
                 </View>
+                
+                <Text>{this.props.navigation.state.params.item}</Text>
            
         </View>
     
